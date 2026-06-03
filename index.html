@@ -29,7 +29,7 @@
             src="./images/image.jpg"
             alt="Дом на колесах в лесу"
           />
-          <span class="card__label">&lt/GOOD&gt</span>
+          <span class="card__label">&lt;/GOOD&gt;</span>
         </div>
         <div class="card__content">
           <p class="card_text">
@@ -95,7 +95,7 @@
             alt="Дом на колесах в лесу"
             loading="lazy"
           />
-          <span class="card__label">&lt/GOOD&gt</span>
+          <span class="card__label">&lt;/GOOD&gt;</span>
         </div>
         <div class="card__content">
           <p class="card_text">
@@ -163,7 +163,7 @@
             alt="Дом на колесах в лесу"
             loading="lazy"
           />
-          <span class="card__label">&lt/GOOD&gt</span>
+          <span class="card__label">&lt;/GOOD&gt;</span>
         </div>
         <div class="card__content">
           <p class="card_text">
@@ -229,7 +229,7 @@
             alt="Дом на колесах в лесу"
             loading="lazy"
           />
-          <span class="card__label">&lt/GOOD&gt</span>
+          <span class="card__label">&lt;/GOOD&gt;</span>
         </div>
         <div class="card__content">
           <p class="card_text">
@@ -299,7 +299,7 @@
             alt="Дом на колесах в лесу"
             loading="lazy"
           />
-          <span class="card__label">&lt/GOOD&gt</span>
+          <span class="card__label">&lt;/GOOD&gt;</span>
         </div>
         <div class="card__content">
           <p class="card_text">
@@ -368,7 +368,7 @@
             alt="Дом на колесах в лесу"
             loading="lazy"
           />
-          <span class="card__label">&lt/BAD&gt</span>
+          <span class="card__label">&lt;/BAD&gt;</span>
         </div>
         <div class="card__content">
           <p class="card_text">
@@ -434,7 +434,7 @@
             alt="Дом на колесах в лесу"
             loading="lazy"
           />
-          <span class="card__label">&lt/BAD&gt</span>
+          <span class="card__label">&lt;/BAD&gt;</span>
         </div>
         <div class="card__content">
           <p class="card_text">
@@ -505,7 +505,7 @@
             alt="Дом на колесах в лесу"
             loading="lazy"
           />
-          <span class="card__label">&lt/GOOD&gt</span>
+          <span class="card__label">&lt;/GOOD&gt;</span>
         </div>
         <div class="card__content">
           <p class="card_text">
@@ -567,37 +567,34 @@
           </div>
         </div>
       </article>
-      <div class="save-button__container">
-        <button
-          class="save-button button"
-          type="button"
-          onclick="window['save-dialog'].showModal()"
-        >
-          <svg class="save-button__icon" aria-hidden="true">
+
+      <button
+        class="save-button button"
+        type="button"
+        onclick="window['save-dialog'].showModal()"
+      >
+        <svg class="save-button__icon" aria-hidden="true">
+          <use href="./svg/icons.svg#floppy-icon"></use>
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+      <dialog id="save-dialog" class="save-dialog">
+        <div class="save-dialog__content">
+          <svg class="save-button__icon" aria-hidden="true" viewBox="0 0 21 21">
             <use href="./svg/icons.svg#floppy-icon"></use>
           </svg>
-          <span class="button__text">Сохранить на память</span>
+          <p class="button__text save-button__text">
+            Вставьте дискету, чтобы продолжить
+          </p>
+        </div>
+        <button
+          onclick="window['save-dialog'].close()"
+          class="save-dialog__button button"
+          type="button"
+        >
+          <span class="button__text save-button__text">ок</span>
         </button>
-        <dialog id="save-dialog" class="save-dialog">
-          <div class="save-dialog__content">
-            <svg
-              class="save-button__icon"
-              aria-hidden="true"
-              viewBox="0 0 21 21"
-            >
-              <use href="./svg/icons.svg#floppy-icon"></use>
-            </svg>
-            <p class="button__text">Вставьте дискету, чтобы продолжить</p>
-          </div>
-          <button
-            onclick="window['save-dialog'].close()"
-            class="save-dialog__button button"
-            type="button"
-          >
-            <span class="button__text">ок</span>
-          </button>
-        </dialog>
-      </div>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
