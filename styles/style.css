@@ -219,16 +219,12 @@ button {
 }
 
 .save-dialog[open] {
-  inline-size: 353px;
-  block-size: 191px;
-  border: 2px solid var(--border-color);
   padding: 30px;
+  border: 2px solid var(--border-color);
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   gap: 30px;
-  overflow: hidden;
+  inline-size: 353px;
 }
 
 .save-dialog[open]::backdrop {
@@ -238,9 +234,8 @@ button {
 
 .save-dialog__content {
   display: flex;
-  gap: 20px;
-  justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .save-dialog[open] .save-button__icon {
@@ -248,10 +243,19 @@ button {
   height: 39px;
 }
 
+.save-button__text {
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
 .save-dialog__button {
-  border: 2px solid var(--border-color);
-  inline-size: 293px;
-  block-size: 38px;
+  inline-size: 100%;
+  min-block-size: 38px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
 }
 
 /* Фильтры на картинки */
@@ -349,13 +353,10 @@ button {
     block-size: 327px;
   }
   .save-dialog[open] {
+    padding: 30px 40px;
     inline-size: 341px;
-    block-size: 184px;
   }
-  .save-dialog__button {
-    inline-size: 261px;
-    block-size: 31px;
-  }
+
   .save-button {
     flex-direction: column;
     block-size: 84px;
